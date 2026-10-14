@@ -3,7 +3,7 @@ name: schematize-api
 metadata:
   version: 0.1.0
 description: >-
-  Contrato de API: OpenAPI 3.1+ contract-first, gRPC/protobuf, webhooks assinados, Idempotency-Key, erros RFC 9457, cursor, Sunset. Use ao desenhar ou revisar spec, *.proto ou webhook. Gate check-api.sh. Publicar a doc: schematize-docs.
+  Contrato de API: OpenAPI 3.1 contract-first, gRPC/protobuf, webhooks assinados, Idempotency-Key, RFC 9457, Sunset. Use ao desenhar ou revisar spec, *.proto ou webhook. Gate check-api.sh.
 ---
 <!-- cross-skill: iam.md, dados-eventos.md, efeitos-externos.md -> schematize-engineering; api-versionamento.md, adr.md -> schematize-docs -->
 
@@ -51,7 +51,7 @@ antes de existir cliente.
 | **Como** autenticar e autorizar: broker `auth.<domínio>`, OIDC/PKCE, passkeys, ReBAC, sessão | `schematize-iam` | aqui só se **declara** `securitySchemes` e escopos por operação; piso base: `schematize-engineering → references/iam.md` |
 | Arquitetura do serviço, DDD, outbox, eventos e contratos de dado | `schematize-engineering` | `schematize-engineering → references/dados-eventos.md`, `arquitetura.md` |
 | Webhook/efeito externo fora de prd (sink, rota nula) | `schematize-engineering` | `schematize-engineering → references/efeitos-externos.md` |
-| Pagamentos (PSP, estados, conciliação) | skill de pagamentos do catálogo | o webhook **genérico** é daqui |
+| Pagamentos (PSP, estados, conciliação) | `schematize-payments` | pagamento: webhook de PSP (assinatura do PSP, estados, idempotência de cobrança) é de lá; o webhook **genérico** é daqui |
 | Esquema de banco, índice do cursor, expand-contract | `schematize-database` | ordem total do cursor exige índice |
 | Pipeline/CDC/contrato de dado em movimento | `schematize-data` | contrato de **evento** de dado é de lá; de **API** é daqui |
 | Teste de contrato, flaky, gate de CI | `schematize-qa` | disciplina geral; aqui as regras do contrato |

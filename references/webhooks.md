@@ -63,7 +63,7 @@ printf '%s.%s.%s' "$ID" "$TS" "$CORPO" \
 
 Declare em `webhooks:` (OpenAPI 3.1+) a operação com os três headers acima e o schema do evento. O gate
 `check-api.sh` reprova `webhook-sem-assinatura` e avisa `webhook-sem-id-ou-timestamp`. Webhook de
-pagamento: o específico do PSP (conciliação, estados do pagamento) é da skill de pagamentos do catálogo; o genérico é daqui.
+pagamento: o específico do PSP (conciliação, estados do pagamento) é da `schematize-payments` (`schematize-payments → references/webhooks-idempotencia.md`); o genérico é daqui.
 
 ## 4. Anti-padrões
 

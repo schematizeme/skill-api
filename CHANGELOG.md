@@ -3,6 +3,14 @@
 Todas as mudanças relevantes deste pacote, no formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/),
 com versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.2.0] — 2026-10-14
+Integração ao catálogo: orçamento de description e ponteiros entre as irmãs novas.
+
+### Alterado
+- `description` <=190 (orçamento do catálogo).
+- Webhook de pagamento: o ponteiro genérico "skill de pagamentos do catálogo" passa a `schematize-payments → references/webhooks-idempotencia.md`.
+- Motivo: o catálogo estourou o orçamento de listagem com 45 skills; cada fronteira aponta a dona em vez de duplicar.
+
 ## [0.1.0] — 2026-10-14
 Primeira versão. O catálogo cobria **publicar** a documentação de API (`schematize-docs`) e a
 **identidade** (`schematize-engineering`, depois a `schematize-iam`), mas nenhuma skill era dona do
