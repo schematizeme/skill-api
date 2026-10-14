@@ -1,7 +1,7 @@
 ---
 name: schematize-api
 metadata:
-  version: 0.2.0
+  version: 0.2.1
 description: >-
   Contrato de API: OpenAPI 3.1 contract-first, gRPC/protobuf, webhooks assinados, Idempotency-Key, RFC 9457, Sunset. Use ao desenhar ou revisar spec, *.proto ou webhook. Gate check-api.sh.
 ---
@@ -16,7 +16,7 @@ parsear texto; com paginação por offset, entrega duplicata e lentidão; deprec
 consegue desligar nada. Tudo isso já foi incidente em algum lugar, e todo item é visível **na spec**,
 antes de existir cliente.
 
-**Versão:** skill `schematize-api` v0.2.0. Changelog em `CHANGELOG.md`.
+**Versão:** skill `schematize-api` v0.2.1. Changelog em `CHANGELOG.md`.
 
 ## Precedência e herança (leia antes de divergir)
 
