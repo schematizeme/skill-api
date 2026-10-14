@@ -3,6 +3,12 @@
 Todas as mudanças relevantes deste pacote, no formato [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/),
 com versionamento [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.2.1] — 2026-10-14
+Ponteiro para a skill nova `schematize-bots` (piso curto, sem duplicar).
+
+### Alterado
+- aponta bots de chat (assinatura de plataforma em /api-webhook e webhooks.md).
+
 ## [0.2.0] — 2026-10-14
 Integração ao catálogo: orçamento de description e ponteiros entre as irmãs novas.
 

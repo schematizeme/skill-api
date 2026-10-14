@@ -26,3 +26,5 @@ Declare o webhook em `webhooks:` da OpenAPI e rode
 `bash .claude/skills/schematize-api/scripts/check-api.sh .` até verde. Entregue com o teste que prova:
 (a) assinatura inválida é rejeitada, (b) replay fora da janela é rejeitado, (c) mesmo `webhook-id` duas
 vezes produz **um** efeito.
+
+Webhook de bot de chat (Discord, Telegram, Slack, WhatsApp): assinatura e prazo próprios em `schematize-bots → references/transporte-e-assinatura.md`.

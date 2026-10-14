@@ -74,3 +74,5 @@ pagamento: o específico do PSP (conciliação, estados do pagamento) é da `sch
 - Handler que processa síncrono antes de responder.
 - Retry sem teto e sem jitter (tempestade de retry derruba o receptor).
 - Webhook de teste batendo em endpoint de cliente real.
+
+Assinatura específica de plataforma de chat (Discord, Telegram, Slack, WhatsApp): `schematize-bots → references/transporte-e-assinatura.md`; aqui só o piso genérico.
