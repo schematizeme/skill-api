@@ -1,0 +1,12 @@
+slug = "api"
+name = "schematize-api"
+tag = "Disciplina · Contrato de API"
+status = "beta"
+order = 44
+current_version = "0.2.0"
+href = "/api"
+
+[descriptions]
+pt = "Contrato de API da casa: OpenAPI 3.1+ contract-first, gRPC/protobuf com buf, webhooks assinados (HMAC, replay, retry, dedupe), Idempotency-Key, erros RFC 9457, paginação por cursor, versionamento e deprecação com Sunset, rate limit e ETag. Traz gate check-api.sh."
+en = "The house's API contract discipline: contract-first OpenAPI 3.1+, gRPC/protobuf with buf, signed webhooks (HMAC, replay window, retry, dedupe), Idempotency-Key, RFC 9457 errors, cursor pagination, versioning and deprecation with Sunset, rate limits and ETag. Ships the check-api.sh gate."
+es = "Contrato de API de la casa: OpenAPI 3.1+ contract-first, gRPC/protobuf con buf, webhooks firmados (HMAC, replay, retry, dedupe), Idempotency-Key, errores RFC 9457, paginación por cursor, versionado y deprecación con Sunset, rate limit y ETag. Incluye el gate check-api.sh."

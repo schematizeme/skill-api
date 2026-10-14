@@ -1,0 +1,21 @@
+# Gate de contrato de API no PR (schematize-api). Actions pinadas por SHA completo.
+name: api-contrato
+on:
+  pull_request:
+    paths: ["**/openapi*.{yaml,yml,json}", "**/*.proto", "scripts/check-api.sh"]
+permissions:
+  contents: read
+jobs:
+  contrato:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Gate estático do contrato
+        run: bash scripts/check-api.sh .
+      - name: Diff de compatibilidade (OpenAPI)
+        run: |
+          # Spec da branch alvo como base; oasdiff ausente => o gate AVISA (não aprova por omissão).
+          git show "origin/${{ github.base_ref }}:openapi.yaml" > /tmp/openapi.base.yaml 2>/dev/null || exit 0
+          API_BASE=/tmp/openapi.base.yaml bash scripts/check-api.sh openapi.yaml
