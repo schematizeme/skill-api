@@ -54,6 +54,7 @@ antes de existir cliente.
 | Pagamentos (PSP, estados, conciliação) | `schematize-payments` | pagamento: webhook de PSP (assinatura do PSP, estados, idempotência de cobrança) é de lá; o webhook **genérico** é daqui |
 | Esquema de banco, índice do cursor, expand-contract | `schematize-database` | ordem total do cursor exige índice |
 | Pipeline/CDC/contrato de dado em movimento | `schematize-data` | contrato de **evento** de dado é de lá; de **API** é daqui |
+| Regressão de contrato no CI (contrato quebrado volta a passar sem ninguém ver; baseline do spec) | `schematize-regression` | `schematize-regression → references/contrato-dados-ia.md`; breaking change e deprecação seguem aqui |
 | Teste de contrato, flaky, gate de CI | `schematize-qa` | disciplina geral; aqui as regras do contrato |
 | Ataque a BOLA/IDOR, SSRF no webhook, abuso de limite | `schematize-pentest` | lado ofensivo; aqui o construtivo |
 | Tráfego, tracing, SLO de endpoint | `schematize-observability` | `trace_id` no erro liga os dois |
@@ -150,5 +151,7 @@ de banco com licença comercial, ou asset do cliente. Claude é o melhor em cód
 - **`schematize-engineering`** é a base: arquitetura, outbox, efeito externo, DoD e archive.
 - **`schematize-database`** sustenta o cursor (índice composto) e a chave de idempotência (UNIQUE).
 - **`schematize-qa`** transforma "duas requisições com a mesma chave produzem um efeito" em teste.
+- **`schematize-regression`** cruza no CI: o diff de breaking change e a deprecação com data seguem
+  **aqui**; o teste que impede o defeito de contrato já corrigido de voltar é o ciclo de lá.
 - **`schematize-pentest`** ataca o que aqui se constrói: BOLA, SSRF, abuso de limite, replay.
 - **`schematize-observability`** liga erro e trace por `trace_id` e mede SLO por endpoint.
